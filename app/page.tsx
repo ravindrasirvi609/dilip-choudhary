@@ -31,6 +31,17 @@ export default function Home() {
 
       <section id="contact" className="block bg-gradient-to-br from-[#f47820] to-[#f5a92e] px-[7vw] py-20 md:flex md:items-end md:justify-between md:px-[10vw] md:py-[115px]"><div><p className="mb-[22px] text-[11px] font-bold uppercase tracking-[.17em] text-[#fff5dd]">आपका साथ ज़रूरी है</p><h2 className={sectionTitle}>आइए, मिलकर<br /><em className="text-white not-italic">बाणियावास बनाएं।</em></h2></div><div className="mt-9 max-w-[220px] text-sm leading-[1.7] text-[#653417] md:mt-0"><p>आपका एक कदम, हमारे गाँव के बेहतर भविष्य की ओर।</p><a className="mt-[18px] inline-flex items-center rounded-[3px] bg-white px-[21px] py-4 text-xs font-bold" href="tel:+919000000000">संपर्क करें <span className="ml-3 text-[17px]">↗</span></a></div></section>
       <footer className="flex flex-col gap-2.5 bg-[#fffaf3] px-[8vw] py-[27px] text-[10px] tracking-[.05em] text-[#8b8177] md:flex-row md:justify-between"><span>© 2026 दिलीप चौधरी</span><span>बाणियावास ग्राम पंचायत · राजस्थान</span><span>जन सेवा ही असली धर्म है</span></footer>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "Person",
+        name: "दिलीप चौधरी",
+        jobTitle: "सरपंच पद के उम्मीदवार",
+        description: "बाणियावास ग्राम पंचायत के सरपंच पद के उम्मीदवार",
+        image: "/dilip-choudhary-portrait.png",
+        url: "/",
+        affiliation: { "@type": "Organization", name: "बाणियावास ग्राम पंचायत" },
+        knowsAbout: ["ग्राम विकास", "पंचायत सेवा", "बाणियावास ग्राम पंचायत"],
+      }) }} />
     </main>
   );
 }

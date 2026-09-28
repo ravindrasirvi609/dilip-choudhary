@@ -2,8 +2,34 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "दिलीप चौधरी | सरपंच प्रत्याशी",
-  description: "दिलीप चौधरी — सरपंच प्रत्याशी, निंबला खेड़ा",
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://dilip-choudhary.vercel.app"),
+  title: {
+    default: "दिलीप चौधरी | बाणियावास ग्राम पंचायत",
+    template: "%s | दिलीप चौधरी",
+  },
+  description: "दिलीप चौधरी — बाणियावास ग्राम पंचायत के सरपंच पद के उम्मीदवार। आकड़ावास, बाणियावास, निम्बला खेड़ा और पड़ासला के विकास का संकल्प।",
+  applicationName: "दिलीप चौधरी अभियान",
+  keywords: ["दिलीप चौधरी", "बाणियावास ग्राम पंचायत", "सरपंच प्रत्याशी", "निम्बला खेड़ा", "आकड़ावास", "पड़ासला", "राजस्थान पंचायत चुनाव"],
+  authors: [{ name: "दिलीप चौधरी" }],
+  creator: "दिलीप चौधरी",
+  alternates: { canonical: "/" },
+  category: "politics",
+  openGraph: {
+    type: "website",
+    locale: "hi_IN",
+    url: "/",
+    siteName: "दिलीप चौधरी | बाणियावास ग्राम पंचायत",
+    title: "दिलीप चौधरी — आपका साथ, हमारा संकल्प",
+    description: "बाणियावास ग्राम पंचायत को स्वच्छ, सशक्त और समृद्ध बनाने की दिशा में एक नई शुरुआत।",
+    images: [{ url: "/dilip-choudhary-poster.jpeg", width: 1083, height: 1452, alt: "दिलीप चौधरी, सरपंच पद के उम्मीदवार" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "दिलीप चौधरी — आपका साथ, हमारा संकल्प",
+    description: "बाणियावास ग्राम पंचायत के सरपंच पद के उम्मीदवार।",
+    images: ["/dilip-choudhary-poster.jpeg"],
+  },
+  robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-image-preview": "large" } },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
