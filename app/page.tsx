@@ -1,14 +1,36 @@
 import Image from "next/image";
 
+const villages = ["अकरावास", "अकरावास पुरोहितान", "बाणियावास", "नीम्बला खेड़ा", "परासला कलां", "परासला खुर्द"];
+const priorities = [
+  ["01", "स्वच्छ और सुंदर गाँव", "साफ़-सफाई, नियमित कचरा प्रबंधन और हर गली में बेहतर व्यवस्था।"],
+  ["02", "पानी और सड़क", "हर घर तक पानी और मजबूत, सुरक्षित सड़कों का विकास।"],
+  ["03", "युवा और शिक्षा", "युवाओं के लिए अवसर, खेल और शिक्षा को नई दिशा।"],
+];
+const eyebrow = "mb-[22px] text-[11px] font-bold uppercase tracking-[.17em] text-[#f47820]";
+const sectionTitle = "m-0 text-[clamp(36px,4.4vw,61px)] font-bold leading-[.99] tracking-[-.055em]";
+
 export default function Home() {
   return (
-    <main className="poster-page">
-      <div className="poster-shell">
-        <div className="poster-frame">
-          <Image src="/dilip-choudhary-poster.jpeg" alt="Dilip Choudhary, Sarpanch candidate for Nimbla Kheda" width={1083} height={1452} priority sizes="(max-width: 680px) 100vw, 640px" />
-        </div>
-        <p className="poster-caption">दिलीप चौधरी · सरपंच प्रत्याशी · निंबला खेड़ा</p>
-      </div>
+    <main className="min-h-screen bg-[#f6f0e7] text-[#27241f]">
+      <nav className="flex h-[82px] items-center justify-between border-b border-[#eadfd2] bg-[#fffaf3] px-[6vw]">
+        <a className="flex items-center gap-[11px]" href="#top"><span className="grid h-[38px] w-[38px] place-items-center rounded-full bg-[#f47820] text-[22px] font-bold text-white">ब</span><span><strong className="block text-[15px]">बाणियावास</strong><small className="mt-0.5 block text-[10px] tracking-[.1em] text-[#786f65]">ग्राम पंचायत</small></span></a>
+        <div className="hidden gap-9 text-[13px] text-[#6f665d] md:flex"><a href="#vision">हमारा संकल्प</a><a href="#villages">हमारे गाँव</a><a href="#contact">संपर्क</a></div>
+        <a className="rounded border border-[#ded2c4] px-[18px] py-3 text-xs" href="#contact">साथ जुड़ें <span className="ml-3 text-[17px]">↗</span></a>
+      </nav>
+
+      <section className="grid min-h-[690px] grid-cols-1 overflow-hidden bg-[linear-gradient(110deg,#fffaf3_0%,#fffaf3_54%,#f6e5cf_54%,#f9eee2_100%)] px-[7vw] pt-[65px] md:grid-cols-[48%_52%] md:pt-[82px]">
+        <div className="z-10 self-center pb-9 md:pb-[65px]"><p className={eyebrow}><i className="mr-2.5 inline-block w-7 border-t-2 border-[#f47820] align-middle" />सरपंच पद के उम्मीदवार</p><h1 className="m-0 text-[clamp(48px,6vw,78px)] font-bold leading-[.99] tracking-[-.055em]">आपका साथ,<br /><em className="text-[#f47820] not-italic">हमारा संकल्प।</em></h1><p className="my-7 max-w-[430px] text-[16px] leading-[1.8] text-[#786f65]">बाणियावास ग्राम पंचायत को एक स्वच्छ, सशक्त और समृद्ध पंचायत बनाने की दिशा में एक नई शुरुआत।</p><div className="flex items-center gap-7"><a className="inline-flex items-center rounded-[3px] bg-[#27241f] px-[21px] py-4 text-xs font-bold text-white" href="#vision">हमारा विज़न <span className="ml-3 text-[17px]">↗</span></a><a className="text-xs text-[#756b61]" href="#villages">गाँव देखें <span className="ml-2 text-[16px] text-[#f47820]">↓</span></a></div><div className="mt-[58px] flex items-center gap-[13px] text-[11px] leading-[1.5] text-[#786f65]"><div className="flex"><b className="grid h-8 w-8 place-items-center rounded-full border-2 border-[#fffaf3] bg-[#27241f] text-[9px] text-white">ब</b><b className="-ml-2 grid h-8 w-8 place-items-center rounded-full border-2 border-[#fffaf3] bg-[#f47820] text-[9px] text-white">जन</b><b className="-ml-2 grid h-8 w-8 place-items-center rounded-full border-2 border-[#fffaf3] bg-[#f47820] text-[9px] text-white">साथ</b></div><span>जनता के साथ<br /><strong className="text-xs text-[#27241f]">मिलकर आगे बढ़ेंगे</strong></span></div></div>
+        <div className="relative min-h-[475px] md:min-h-[560px]"><div className="absolute left-1/2 top-[45px] h-[350px] w-[350px] -translate-x-1/2 rounded-full bg-gradient-to-br from-[#ffc95f] to-[#f47c23] md:top-5 md:h-[455px] md:w-[455px]" /><div className="absolute inset-0 bottom-[-45px]"><Image src="/dilip-choudhary-portrait.png" alt="दिलीप चौधरी, सरपंच पद के उम्मीदवार" fill priority sizes="(max-width: 800px) 100vw, 50vw" className="object-contain object-bottom" /></div><div className="absolute left-0 top-20 grid h-[100px] w-[100px] rotate-[-12deg] place-content-center rounded-full border border-[#f47820]/55 text-center text-[12px] leading-[1.4] text-[#f47820] md:left-[2%] md:top-[110px] md:h-[126px] md:w-[126px]">जन सेवा<br /><strong className="text-[10px] text-[#27241f]">सबसे बड़ा धर्म</strong></div><div className="absolute bottom-2 right-0 bg-white px-[18px] py-3 shadow-[0_5px_20px_rgb(55_38_20_/_10%)] md:right-[7%]"><strong className="block text-[16px]">दिलीप चौधरी</strong><span className="mt-1 block text-[10px] text-[#f47820]">सरपंच प्रत्याशी</span></div></div>
+      </section>
+
+      <section id="vision" className="bg-[#fffaf3] px-[7vw] py-20 text-center md:px-[12vw] md:py-[125px]"><p className={eyebrow}>हमारा उद्देश्य</p><h2 className={sectionTitle}>बाणियावास के हर गाँव की<br /><em className="text-[#f47820] not-italic">तरक्की, हमारी ज़िम्मेदारी।</em></h2><p className="mx-auto mt-7 max-w-[510px] text-[15px] leading-[1.8] text-[#786f65]">नेतृत्व सिर्फ़ एक पद नहीं, बल्कि अपने लोगों के प्रति एक ज़िम्मेदारी है। आपका विश्वास और हमारा समर्पण—इसी से बनेगा हमारा बेहतर कल।</p></section>
+
+      <section className="bg-[#f6f0e7] px-[7vw] py-20 md:px-[8vw] md:py-[110px]"><div className="mb-12 block md:mb-[58px] md:flex md:items-end md:justify-between"><div><p className={eyebrow}>हमारी प्राथमिकताएँ</p><h2 className={sectionTitle}>काम की बात,<br /><em className="text-[#f47820] not-italic">साफ़ नीयत के साथ।</em></h2></div><p className="mt-6 max-w-[230px] text-sm leading-[1.7] text-[#786f65] md:mr-[5%] md:mt-0">हमारा लक्ष्य है कि विकास की रोशनी पंचायत के हर कोने तक पहुँचे।</p></div><div className="grid grid-cols-1 gap-5 md:grid-cols-3">{priorities.map(([number, title, text]) => <article className="min-h-[270px] border border-[#eddfd0] bg-[#fffaf3] p-[27px]" key={number}><span className="text-xs font-bold text-[#f47820]">{number}</span><div className="my-[22px] border-t border-[#e7d9cb]" /><h3 className="mb-3 text-[21px]">{title}</h3><p className="text-[13px] leading-[1.7] text-[#786f65]">{text}</p><a className="mt-6 block text-xs text-[#f47820]" href="#contact">जानें <b className="float-right text-[17px]">↗</b></a></article>)}</div></section>
+
+      <section id="villages" className="grid grid-cols-1 bg-[#27241f] px-[7vw] py-20 text-white md:grid-cols-[39%_61%] md:px-[8vw] md:py-[120px]"><div><p className="mb-[22px] text-[11px] font-bold uppercase tracking-[.17em] text-[#f5b544]">हमारी पंचायत</p><h2 className={sectionTitle}>छह गाँव,<br /><em className="text-[#f5b544] not-italic">एक परिवार।</em></h2><p className="mt-7 max-w-[280px] text-sm leading-[1.8] text-[#b4aba1]">बाणियावास ग्राम पंचायत में शामिल सभी गाँवों का समान विकास और सम्मान हमारा वादा है।</p></div><div className="pt-10 md:pl-[10%] md:pt-0">{villages.map((village, index) => <div className="flex items-center border-b border-[#4b4640] py-5" key={village}><span className="w-[55px] text-[11px] text-[#f5b544]">0{index + 1}</span><strong className="text-[clamp(19px,2.4vw,29px)] font-normal">{village}</strong><b className="ml-auto text-xl text-[#f47820]">↗</b></div>)}</div></section>
+
+      <section id="contact" className="block bg-gradient-to-br from-[#f47820] to-[#f5a92e] px-[7vw] py-20 md:flex md:items-end md:justify-between md:px-[10vw] md:py-[115px]"><div><p className="mb-[22px] text-[11px] font-bold uppercase tracking-[.17em] text-[#fff5dd]">आपका साथ ज़रूरी है</p><h2 className={sectionTitle}>आइए, मिलकर<br /><em className="text-white not-italic">बाणियावास बनाएं।</em></h2></div><div className="mt-9 max-w-[220px] text-sm leading-[1.7] text-[#653417] md:mt-0"><p>आपका एक कदम, हमारे गाँव के बेहतर भविष्य की ओर।</p><a className="mt-[18px] inline-flex items-center rounded-[3px] bg-white px-[21px] py-4 text-xs font-bold" href="tel:+919000000000">संपर्क करें <span className="ml-3 text-[17px]">↗</span></a></div></section>
+      <footer className="flex flex-col gap-2.5 bg-[#fffaf3] px-[8vw] py-[27px] text-[10px] tracking-[.05em] text-[#8b8177] md:flex-row md:justify-between"><span>© 2026 दिलीप चौधरी</span><span>बाणियावास ग्राम पंचायत · राजस्थान</span><span>जन सेवा ही असली धर्म है</span></footer>
     </main>
   );
 }
