@@ -1,5 +1,48 @@
 @import "tailwindcss";
 
+@theme {
+  /* ── Color palette ──────────────────────────────────────────────────── */
+  --color-ivory:         #fffaf3;
+  --color-sand:          #f6f0e7;
+  --color-sand-deep:     #f6e5cf;
+  --color-border-warm:   #eddfd0;
+  --color-border-light:  #eadfd2;
+  --color-charcoal:      #27241f;
+  --color-charcoal-soft: #4b4640;
+  --color-saffron:       #f47820;
+  --color-saffron-dark:  #e06e18;
+  --color-gold:          #f5b544;
+  --color-muted:         #786f65;
+  --color-muted-dark:    #b4aba1;
+
+  /* ── Typography ─────────────────────────────────────────────────────── */
+  --font-sans: var(--font-mukta), 'Mukta', Arial, Helvetica, sans-serif;
+
+  /* ── Motion ─────────────────────────────────────────────────────────── */
+  --animate-fade-rise: fade-rise 0.65s ease-out both;
+}
+
+@keyframes fade-rise {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0);    }
+}
+
+/* Disable animation for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .animate-fade-rise { animation: none; }
+  html { scroll-behavior: auto; }
+}
+
 html { scroll-behavior: smooth; }
 
-body { margin: 0; font-family: Arial, Helvetica, sans-serif; }
+body {
+  margin: 0;
+  /* Explicit fallback in case @theme font-sans resolution differs */
+  font-family: var(--font-mukta, 'Mukta'), Arial, Helvetica, sans-serif;
+}
+
+:focus-visible {
+  outline:        2px solid var(--color-saffron);
+  outline-offset: 3px;
+  border-radius:  2px;
+}
