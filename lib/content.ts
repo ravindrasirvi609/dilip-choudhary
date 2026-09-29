@@ -11,6 +11,7 @@ export const candidate = {
 
   phone: "+916375523802",
   whatsapp: "https://wa.me/916375523802?text=नमस्ते%20दिलीप%20जी,%20मैं%20आपसे%20जुड़ना%20चाहता%2Fचाहती%20हूँ।",
+  instagram: "https://www.instagram.com/iamdilipchoudhary?stkn=MTcybm95dm5jMjJ1cw==",
 } as const;
 
 export const villages = [
