@@ -7,6 +7,7 @@ import Villages            from "@/components/Villages";
 import CommunityInvitation from "@/components/CommunityInvitation";
 import Footer              from "@/components/Footer";
 import StructuredData      from "@/components/StructuredData";
+import { candidate }        from "@/lib/content";
 
 export default function Home() {
   return (
@@ -27,6 +28,15 @@ export default function Home() {
 
       <Footer />
       <StructuredData />
+      <a
+        href={candidate.whatsapp}
+        target="_blank"
+        rel="noreferrer"
+        aria-label="WhatsApp पर संपर्क करें"
+        className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-2xl text-white shadow-lg transition-transform hover:scale-105"
+      >
+        <span aria-hidden="true">◉</span>
+      </a>
     </>
   );
 }

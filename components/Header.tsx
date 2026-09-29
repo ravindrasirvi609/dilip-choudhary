@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
-import { navLinks } from "@/lib/content";
+import { candidate, navLinks } from "@/lib/content";
 
 export default function Header() {
   const [open, setOpen]         = useState(false);
@@ -87,10 +87,12 @@ export default function Header() {
         <div className="flex items-center gap-3">
           {/* Desktop CTA */}
           <a
-            href="#contact"
-            className="hidden shrink-0 items-center rounded border border-border-warm px-[18px] py-3 text-xs transition-colors duration-150 hover:bg-sand sm:inline-flex"
+            href={candidate.whatsapp}
+            target="_blank"
+            rel="noreferrer"
+            className="hidden shrink-0 items-center gap-2 rounded border border-border-warm px-[18px] py-3 text-xs transition-colors duration-150 hover:bg-sand sm:inline-flex"
           >
-            साथ जुड़ें <span aria-hidden="true" className="ml-3 text-[17px]">↗</span>
+            <span aria-hidden="true" className="text-base text-[#25D366]">◉</span> WhatsApp
           </a>
 
           {/* Hamburger button */}
@@ -173,12 +175,14 @@ export default function Header() {
         {/* CTA at bottom of drawer */}
         <div className="mt-auto px-6 pb-10 pt-6">
           <a
-            href="#contact"
+            href={candidate.whatsapp}
+            target="_blank"
+            rel="noreferrer"
             tabIndex={open ? 0 : -1}
             className="block rounded bg-saffron px-6 py-4 text-center text-sm font-bold text-white transition-colors duration-150 hover:bg-saffron-dark"
             onClick={close}
           >
-            साथ जुड़ें
+            WhatsApp पर जुड़ें
           </a>
         </div>
       </div>

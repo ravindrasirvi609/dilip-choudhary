@@ -9,8 +9,8 @@ export const candidate = {
   poster:      "/dilip-choudhary-poster.jpeg",
   posterAlt:   "दिलीप चौधरी, सरपंच अभियान पोस्टर",
 
-  // TODO: Replace with a verified phone number before publishing
-  phone: null as string | null,
+  phone: "+916375523802",
+  whatsapp: "https://wa.me/916375523802?text=नमस्ते%20दिलीप%20जी,%20मैं%20आपसे%20जुड़ना%20चाहता%2Fचाहती%20हूँ।",
 } as const;
 
 export const villages = [

@@ -93,17 +93,18 @@ export default function CommunityInvitation() {
             सीधे मिलें या अपनी बात पहुँचाएँ।
           </p>
 
-          {/* Show contact only when a verified phone number is set in lib/content.ts */}
           {candidate.phone ? (
             <a
-              href={`tel:${candidate.phone}`}
+              href={candidate.whatsapp}
+              target="_blank"
+              rel="noreferrer"
               className="mt-[18px] inline-flex items-center rounded-[3px] bg-white px-[21px] py-4 text-xs font-bold text-charcoal transition-colors duration-150 hover:bg-sand"
             >
-              संपर्क करें{" "}
+              <span aria-hidden="true" className="mr-2 text-base text-[#25D366]">◉</span>
+              WhatsApp पर संपर्क करें{" "}
               <span aria-hidden="true" className="ml-3 text-[17px]">↗</span>
             </a>
           ) : (
-            /* Remove this block and set candidate.phone in lib/content.ts when available */
             <p className="mt-[18px] rounded border border-[#e09060]/40 bg-white/25 px-4 py-3 text-[12px] italic text-[#7a4520]">
               संपर्क विवरण शीघ्र उपलब्ध होंगे।
             </p>
