@@ -56,8 +56,8 @@ export default function About() {
 
           {/* Campaign message pull-quote */}
           <blockquote className="mt-8 border-l-2 border-saffron pl-5 text-[18px] font-semibold leading-[1.5] text-charcoal">
-            "{candidate.panchayat} के विकास के लिए हम सब मिलकर एक नई राह
-            बनाएंगे।"
+            &ldquo;{candidate.panchayat} के विकास के लिए हम सब मिलकर एक नई राह
+            बनाएंगे।&rdquo;
           </blockquote>
 
           {/* Values */}
@@ -69,6 +69,28 @@ export default function About() {
                 <p className="mt-1.5 text-[12px] leading-[1.7] text-muted">{body}</p>
               </div>
             ))}
+          </div>
+
+          <div className="mt-12 border-t border-border-warm pt-8">
+            <h3 className="text-[19px] font-semibold">क्यों ज़रूरी है आपका साथ?</h3>
+            <p className="mt-3 text-[14px] leading-[1.8] text-muted">
+              पंचायत का विकास तभी स्थायी होगा जब हर परिवार अपनी बात रख सके और
+              हर गाँव की ज़रूरत योजना का हिस्सा बने। हमारा प्रयास होगा कि
+              फैसले कागज़ों तक सीमित न रहें, बल्कि उनका असर हर घर और हर गली में
+              दिखाई दे।
+            </p>
+            <div className="mt-6 grid grid-cols-1 gap-3 text-[13px] sm:grid-cols-2">
+              {[
+                "खुले और जवाबदेह पंचायत कार्य",
+                "महिलाओं और युवाओं की सक्रिय भागीदारी",
+                "गाँव-गाँव नियमित जन-सुनवाई",
+                "सरकारी योजनाओं का सही लाभ",
+              ].map((item) => (
+                <div key={item} className="flex items-center gap-2 text-charcoal">
+                  <span className="text-saffron" aria-hidden="true">✓</span>{item}
+                </div>
+              ))}
+            </div>
           </div>
         </div>
 

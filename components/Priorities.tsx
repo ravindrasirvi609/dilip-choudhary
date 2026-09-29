@@ -67,6 +67,20 @@ export default function Priorities() {
           </article>
         ))}
       </div>
+
+      <div className="mt-12 grid grid-cols-1 gap-4 border-t border-border-warm pt-8 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          ["स्वास्थ्य", "स्वास्थ्य शिविर, दवाइयों की जानकारी और ज़रूरतमंद परिवारों तक योजनाओं की पहुँच।"],
+          ["महिला सशक्तिकरण", "महिला समूहों, कौशल विकास और आत्मनिर्भरता के अवसरों को बढ़ावा।"],
+          ["कृषि और रोज़गार", "किसानों को योजनाओं की जानकारी और स्थानीय रोज़गार के नए अवसर।"],
+          ["पर्यावरण", "जल संरक्षण, पौधारोपण और स्वच्छ, हरा-भरा पंचायत परिसर।"],
+        ].map(([title, text]) => (
+          <div key={title} className="border-l-2 border-saffron pl-4">
+            <h3 className="text-[15px] font-semibold">{title}</h3>
+            <p className="mt-2 text-[12px] leading-[1.7] text-muted">{text}</p>
+          </div>
+        ))}
+      </div>
     </section>
   );
 }

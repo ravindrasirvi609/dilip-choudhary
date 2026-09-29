@@ -84,6 +84,21 @@ export default function Vision() {
             </div>
           ))}
         </div>
+
+        <div className="mt-16 border-t border-border-warm pt-10">
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-[.8fr_1.2fr] md:gap-16">
+            <div>
+              <p className="text-[11px] font-bold uppercase tracking-[.17em] text-saffron">काम करने का तरीका</p>
+              <h3 className="mt-4 text-[28px] font-semibold leading-tight tracking-[-.04em]">वादा नहीं,<br />व्यवस्थित प्रयास।</h3>
+            </div>
+            <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              <div><strong className="text-[15px]">पहले 100 दिन</strong><p className="mt-2 text-[13px] leading-[1.7] text-muted">हर गाँव की प्राथमिक समस्याओं की सूची, जन-सुनवाई और काम की स्पष्ट समय-सीमा।</p></div>
+              <div><strong className="text-[15px]">नियमित संवाद</strong><p className="mt-2 text-[13px] leading-[1.7] text-muted">लोगों को प्रगति की जानकारी और योजनाओं की स्थिति सरल भाषा में उपलब्ध कराना।</p></div>
+              <div><strong className="text-[15px]">साझा निगरानी</strong><p className="mt-2 text-[13px] leading-[1.7] text-muted">स्थानीय लोगों के साथ मिलकर काम की गुणवत्ता और समय पर पूरा होने की निगरानी।</p></div>
+              <div><strong className="text-[15px]">समान अवसर</strong><p className="mt-2 text-[13px] leading-[1.7] text-muted">किसी भी गाँव, परिवार या वर्ग के साथ भेदभाव के बिना विकास का लाभ।</p></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
