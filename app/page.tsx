@@ -5,6 +5,7 @@ import Vision              from "@/components/Vision";
 import Priorities          from "@/components/Priorities";
 import Villages            from "@/components/Villages";
 import CommunityInvitation from "@/components/CommunityInvitation";
+import Songs                from "@/components/Songs";
 import Footer              from "@/components/Footer";
 import StructuredData      from "@/components/StructuredData";
 import { candidate }        from "@/lib/content";
@@ -19,6 +20,7 @@ export default function Home() {
         className="min-h-screen max-w-full overflow-x-hidden bg-sand text-charcoal"
       >
         <Hero />
+        <Songs />
         <About />
         <Vision />
         <Priorities />
