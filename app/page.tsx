@@ -4,6 +4,7 @@ import About               from "@/components/About";
 import Vision              from "@/components/Vision";
 import Priorities          from "@/components/Priorities";
 import Villages            from "@/components/Villages";
+import ProblemForm         from "@/components/ProblemForm";
 import CommunityInvitation from "@/components/CommunityInvitation";
 import Songs                from "@/components/Songs";
 import Footer              from "@/components/Footer";
@@ -25,6 +26,7 @@ export default function Home() {
         <Vision />
         <Priorities />
         <Villages />
+        <ProblemForm />
         <CommunityInvitation />
       </main>
 

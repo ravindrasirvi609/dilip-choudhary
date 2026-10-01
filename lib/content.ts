@@ -42,10 +42,11 @@ export const priorities = [
 ] as const;
 
 export const navLinks = [
-  { href: "#vision",     label: "हमारा विज़न"  },
-  { href: "#priorities", label: "प्राथमिकताएँ" },
-  { href: "#villages",   label: "हमारे गाँव"   },
-  { href: "#contact",    label: "संपर्क"        },
+  { href: "#vision",     label: "हमारा विज़न"      },
+  { href: "#priorities", label: "प्राथमिकताएँ"     },
+  { href: "#villages",   label: "हमारे गाँव"       },
+  { href: "#samasya",    label: "समस्या दर्ज करें" },
+  { href: "#contact",    label: "संपर्क"            },
 ] as const;
 
 export const songs = [
